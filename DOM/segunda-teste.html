@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 1</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="digite um item" id="itemNovo">
+    
+    <button onclick="adicionar()">Clique aqui</button>
+
+    <button onclick="remover()">remover</button>
+
+    <button onclick="removerAleatorio()">remover aleatório</button>
+
+    <button onclick="listaFilhos()">quantidade</button>
+    
+    <ul id="lista">
+        <li>Item 1</li>
+        <li id="tutu">Item 2</li>
+        <li id="toto">Item 3</li>
+    </ul>
+
+    <script>
+
+        function adicionar(){
+            let texto = document.getElementById("itemNovo").value;
+            let ul = document.getElementById("lista");
+            let liNovo = document.createElement("li");
+            liNovo.textContent = texto;
+            ul.appendChild(liNovo);
+        }
+
+        function remover(){
+            /*let toto = document.getElementById("toto");
+            toto.remove();*/
+
+            let ul = document.getElementById("lista");
+            ul.removeChild(ul.lastChild);
+        }
+
+        function removerAleatorio(){
+            
+            let ul = document.getElementById("lista");
+
+            let aleatorio = Math.floor(Math.random() * ul.children.length);
+            ul.removeChild(ul.children[aleatorio]);
+        }
+
+        function listaFilhos(){
+            let ul = document.getElementById("lista");
+            console.log(ul.children.length);
+        }
+    </script>
+
+</body>
+</html>

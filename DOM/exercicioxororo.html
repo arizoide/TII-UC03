@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <ol>
+        <li>Ari</li>
+        <li>Mike</li>
+        <li>Kevin</li>
+    </ol>
+    <script>
+        function marcarNomes(inputPesquisa) {
+            console.log("chamou")
+            var pesquisa = inputPesquisa.value.toLowerCase();
+            var itensLista = document.querySelectorAll('ol li');
+            console.log(pesquisa)
+            for(var i = 0; i < itensLista.length; i++) {
+                var nome = itensLista[i].textContent.toLowerCase();
+                console.log(pesquisa)
+                if(pesquisa.length > 0){  
+                    if (nome.startsWith(pesquisa)) {
+                        itensLista[i].innerHTML = "<b>" + itensLista[i].textContent + "</b>";
+                    }
+                    else {
+                        itensLista[i].innerHTML = itensLista[i].textContent;
+                    }
+                    nome="";
+                } else {
+                    itensLista[i].innerHTML = itensLista[i].textContent;
+                }
+            }
+        }
+
+        var inputPesquisa = document.getElementById("input");
+        document.addEventListener("input", function(e) {
+            marcarNomes(inputPesquisa);    
+        })
+
+    </script>
+</body>
+</html>

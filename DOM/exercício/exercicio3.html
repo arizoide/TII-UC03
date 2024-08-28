@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terceiro</title>
+    <script>
+
+        function contar(){
+            var primeiroNumero = parseInt(document.getElementById("primeiroNumero").value);
+            var segundoNumero = parseInt(document.getElementById("segundoNumero").value);
+            var contador = 0
+            if(primeiroNumero > segundoNumero){
+                alert("Primeiro número deve ser menor que o segundo");
+                document.getElementById("primeiroNumero").value = "";
+                document.getElementById("segundoNumero").value = "";
+            } else {
+                for(let i = primeiroNumero; i <= segundoNumero; i++){
+                    if(i % 2 == 0 && i % 3 == 0){
+                        contador++;
+                    }
+                }
+                document.getElementById("multiplos").innerHTML = "O intervalo de " +
+                primeiroNumero + " e " + segundoNumero + " tem " + contador + " múltiplos" +
+                " de 2 e 3 simultaneamente!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Primeiro" id="primeiroNumero">
+    <input type="number" placeholder="Segundo" id="segundoNumero">
+    <button onclick="contar()">Contar</button>
+    <br>
+    <label id="multiplos"></label>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+        function tabuada() {
+            var num = parseInt(document.getElementById("numero").value);
+            var resultado = document.getElementById("tabuada");
+            resultado.innerHTML = "";
+            if(!isNaN(num)){  
+                for(let i = 1; i <= 10; i++){
+                    resultado.innerHTML += num + " x " + i + " = " + (num * i) + "<br>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" onclick="tabuada()" placeholder="Qual número deseja saber a tatuada" id="numero">
+    <br>
+    <label id="tabuada"></label>
+</body>
+</html>

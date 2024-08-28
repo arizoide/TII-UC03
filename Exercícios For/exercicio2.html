@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var I = parseInt(prompt("Digite a nota do exame I"));
+        var II = parseInt(prompt("Digite a nota do exame II"));
+        var III = parseInt(prompt("Digite a nota do exame III"));
+        var IV = parseInt(prompt("Digite a nota do exame IV"));
+        var V = parseInt(prompt("Digite a nota do exame V"));
+
+        if(I >= 70 && II >= 70 && III >= 70 && IV >= 70 && V >= 70){
+            document.write("Classificação A");
+        } else if (I >= 70 && II >= 70 && IV >= 70){
+            document.write("Classificação B");
+        } else if (I >= 70 && II >= 70 && (III >= 70 || IV >= 70)){
+            document.write("Classificação C");
+        } else {
+            document.write("Reprovado");
+        }
+
+    </script>
+</body>
+</html>

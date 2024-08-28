@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 1</title>
+</head>
+<body>
+    <button id="botao" style="position: absolute; width: 100px; height: 25px;" onmouseover="chatinho()">Clique aqui</button>
+
+    <script>
+        function mudaTexto(){
+            let paragrafo = document.getElementById("meuParagrafo");
+            paragrafo.textContent = "Clicou";
+        }
+
+        function corzinha(){
+            let paragrafo = document.getElementById("meuParagrafo");
+            paragrafo.style.color = "red";
+        }
+
+        function voltaCorzinha(){
+            let paragrafo = document.getElementById("meuParagrafo");
+            paragrafo.style.color = "black";
+        }
+
+        function chatinho(){
+            let altura = window.outerHeight;
+            let largura = window.outerWidth;
+
+            var x = Math.random() * (largura - 100) + 100;
+            var y = Math.random() * (altura - 25) + 25;
+
+            let botao = document.getElementById("botao");
+            botao.style.top = y + "px";
+            botao.style.left = x + "px";
+        }
+    </script>
+</body>
+</html>

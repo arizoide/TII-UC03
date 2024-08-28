@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tipo = prompt("Tipo 1 - ervas daninhas R$50,00 por acre \n" +
+        "Tipo 2 - gafanhotos R$100,00 por acre \n" +
+        "Tipo 3 - broca R$150,00 por acre \n" +        
+        "Tipo 4 - Todas acima R$250,00 por acre "
+        );
+        var area = parseInt(prompt("Area em acre"));
+
+        var valorTotal = 0;
+        
+        switch (tipo) {
+            case "1":   
+                valorTotal = area * 50;   
+                if(area > 1000){
+                    valorTotal *= 0.95;
+                }  
+                
+                if(valorTotal > 750){
+                    var valorSobressalente = valorTotal - 750;
+                    valorSobressalente *= 0.90;
+                    valorTotal = 750 + valorSobressalente;
+                }
+                break;   
+            case "2":
+                valorTotal = area * 100;   
+                if(area > 1000){
+                    valorTotal *= 0.95;
+                }  
+                
+                if(valorTotal > 750){
+                    var valorSobressalente = valorTotal - 750;
+                    valorSobressalente *= 0.90;
+                    valorTotal = 750 + valorSobressalente;
+                }
+                break;   
+            case "3":
+                valorTotal = area * 150;   
+                if(area > 1000){
+                    valorTotal *= 0.95;
+                }  
+                
+                if(valorTotal > 750){
+                    var valorSobressalente = valorTotal - 750;
+                    valorSobressalente *= 0.90;
+                    valorTotal = 750 + valorSobressalente;
+                }
+                break;   
+            case "4":
+                valorTotal = area * 250;   
+                if(area > 1000){
+                    valorTotal *= 0.95;
+                }  
+                
+                if(valorTotal > 750){
+                    var valorSobressalente = valorTotal - 750;
+                    valorSobressalente *= 0.90;
+                    valorTotal = 750 + valorSobressalente;
+                }
+                break;
+
+            default:
+                document.write("Opção inválida");
+                break;
+        }
+
+        document.write("O valor total a ser pago é: " + valorTotal);
+            
+    </script>
+</body>
+</html>

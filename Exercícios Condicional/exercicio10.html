@@ -1,0 +1,52 @@
+<!-- Documento HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Script em JavaScript -->
+    <script>
+        // 123 tem que ser impresso 321 (comentário do autor)
+
+        // Variável que armazena o número a ser invertido
+        var numero = 910;
+
+        // Variável que armazena a centena do número
+        var centena = 0;
+
+        // Calcula a centena do número (divisão inteira por 100)
+        centena = numero / 100;
+
+        // Variável que armazena a dezena do número
+        var dezena = 0;
+
+        // Calcula a dezena do número (resto da divisão por 100, dividido por 10)
+        dezena = (numero % 100) / 10;
+
+        // Variável que armazena a unidade do número
+        var unidade = 0
+
+        // Calcula a unidade do número (resto da divisão por 10)
+        unidade = numero % 10;
+
+        // Imprime o número invertido
+        document.write("O número " + numero + " invertido é: " + parseInt(unidade) + "" 
+        + parseInt(dezena) + "" + parseInt(centena));
+
+        // Imprime uma quebra de linha
+        document.write("<br><br>")
+
+        // Imprime as partes do número separadamente
+        document.write(parseInt(unidade));        
+        document.write(parseInt(dezena));
+        document.write(parseInt(centena));
+        
+
+    </script>
+</body>
+</html>

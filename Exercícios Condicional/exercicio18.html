@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>       
+
+        var combustivel = prompt("Digite A para álcool e G para gasolina").toLowerCase();
+        var litros = parseFloat(prompt("Digite a quantidade de litros"));
+
+        var valorTotal = 0;
+
+        if(combustivel == 'a') {
+            if(litros > 25){
+                valorTotal = litros * 1.90 * 0.96;
+            } else {
+                valorTotal = litros * 1.90 * 0.98;
+            }
+        } else {
+            if(litros > 25){
+                valorTotal = litros * 2.70 * 0.95;
+            } else {
+                valorTotal = litros * 2.70 * 0.97;
+            }
+        }
+
+        document.write("O valor total é: " + valorTotal);
+
+
+
+    </script>
+</body>
+</html>

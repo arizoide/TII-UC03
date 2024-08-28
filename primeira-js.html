@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var divisao = 33 / 17;
+
+        var nome = prompt("Digite seu nome");
+        var idade = parseInt(prompt("Digite sua idade"));
+
+        document.write('<h1>A idade do ' + nome + ' é ' + somar(idade, 33) + '</h1><br>');
+        document.write(nome + " tem: " + 2024*1991);
+        pulaLinha();
+        document.write("A razão das idades é: " + Math.round(divisao));
+        pulaLinha();
+        document.write("A razão das idades é: " + Math.ceil(divisao));
+        pulaLinha();
+        document.write("A razão das idades é: " + Math.floor(divisao));
+        pulaLinha();
+        document.write("A razão das idades é: " + divisao.toFixed(2));
+
+        
+
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+
+        function somar(a, b){
+            return a + b;
+        }
+
+    </script>  
+</body>
+</html>

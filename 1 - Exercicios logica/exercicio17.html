@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function calcularSalario(horas, vh) {
+            return horas * vh;
+        }
+
+        var qtdHorasTrabalhadas = parseFloat(prompt("Digite a quantidade de horas que o funcionário trabalhou"));        
+        var valorHora = parseFloat(prompt("Digite o valor hora do func."));        
+        
+
+        document.write("O salário  é: " + calcularSalario(qtdHorasTrabalhadas, valorHora));
+    </script>
+</body>
+</html>

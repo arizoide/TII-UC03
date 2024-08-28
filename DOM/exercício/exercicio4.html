@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+
+        function adicionar(){
+            var nome = document.getElementById("nome").value;
+            var telefone = document.getElementById("telefone").value;
+
+            var lista = document.getElementById("agenda");
+
+            var novoContato = document.createElement("li");
+            novoContato.textContent = nome + " - " + telefone;
+
+            var novoBotao = document.createElement("button");
+            novoBotao.textContent = "remover"
+
+            lista.appendChild(novoContato);        
+            lista.appendChild(novoBotao);
+        }
+
+        function remover(){
+            var lista = document.getElementById("agenda");
+            lista.removeChild(lista.lastChild);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Nome" id="nome">
+    <input type="text" placeholder="Telefone" id="telefone">
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="remover()">Remover</button>
+    <br>
+    <ul id="agenda">
+    </ul>
+</body>
+</html>

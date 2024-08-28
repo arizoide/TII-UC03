@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+        /*let numero = parseInt(prompt("Digite um número"));     
+
+        let qtdRestoZero = 0;
+
+        for(let cont = 1; cont <= numero; cont++){
+            if(numero % cont == 0){ 
+                qtdRestoZero++;
+            }
+        }
+
+        if(qtdRestoZero == 2){
+            document.write("Primo");
+        } else {
+            document.write("Não é primo");
+        }*/
+        let numero = parseInt(prompt("Digite um número"));
+        if(numero > 7){
+            if(numero % 2 == 0 || numero % 3 == 0 || numero % 5 == 0 || numero % 7 == 0){
+                document.write("Não é primo");
+            } else {
+                document.write("Primo");
+            }
+        } else if (numero == 2 || numero == 3 || numero == 5 || numero == 7){
+            document.write("Primo");
+        } else {
+            document.write("Não é primo");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>          
+        let numero = parseInt(prompt("Digite um número"));
+
+        let ultimo = 1;
+        let penultimo = 1;
+        let atual = 1;
+
+
+        for(let cont = 3; cont <= numero; cont++){
+            atual = penultimo + ultimo;
+            penultimo = ultimo;
+            ultimo = atual;     
+        }
+
+        document.write("O termo " + numero + " na sequência Fibonnacci é: " + atual);  
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>          
+        /*
+        ##|*|##
+        #*|*|*#
+        **|*|**
+        */
+
+        let numero = parseInt(prompt("Digite um número"));
+
+        let centro = "*";
+
+        for(let linhas = 0; linhas < numero; linhas++){ 
+            let esquerda = "";
+            let direita = "";
+            let esquerdaHashtag = "";
+            let direitaHashtag = "";
+            for(let asterisco=0; asterisco < linhas; asterisco++){
+                esquerda = esquerda + "*";
+                direita = direita + "*";
+            }
+
+            for(let hashtag = 0; hashtag < numero - (linhas + 1); hashtag++){
+                esquerdaHashtag = esquerdaHashtag + "#";
+                direitaHashtag = direitaHashtag + "#";
+            }
+            document.write(esquerdaHashtag + esquerda + centro + direita + direitaHashtag + "<br>");
+        }
+
+    </script>
+</body>
+</html>

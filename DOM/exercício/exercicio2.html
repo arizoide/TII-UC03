@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <script>
+
+        function pesquisa(){
+            var pesquisa = document.getElementById("pesquisa").value;
+
+            var lista = document.querySelectorAll('ol li');
+
+            for(var i = 0; i < lista.length; i++){
+                if(pesquisa != "" && lista[i].textContent.toLowerCase().startsWith(pesquisa.toLowerCase())){
+                    lista[i].innerHTML = "<b>" + lista[i].textContent + "</b>";
+                } else {
+                    lista[i].innerHTML = lista[i].textContent;
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeyup="pesquisa()" placeholder="Pesquisa" id="pesquisa">
+    <br>
+    <ol type="I">
+        <li>Mike</li>
+        <li>Gabriel</li>
+        <li>Casal</li>
+        <li>Fernanda</li>
+        <li>mDiogo</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function calcularAumento(valor, porcentagemAumento) {
+            return valor + (valor * porcentagemAumento / 100);
+        }
+
+        var valorProduto = parseFloat(prompt("Digite o valor do produto"));        
+        var porcAumento = parseFloat(prompt("Digite a porcentagem de aumento"));        
+        
+
+        document.write("O Valor final do produto: " + calcularAumento(valorProduto, porcAumento));
+    </script>
+</body>
+</html>

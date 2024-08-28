@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>       
+
+        var valorASerSacado = parseFloat(prompt("Digite o valor a ser sacado"));
+
+        var nota100 = 0;
+        var nota50 = 0;
+        var nota20 = 0;
+        var nota10 = 0;
+        var nota5 = 0;
+        var nota2 = 0;
+        var nota1 = 0;
+
+        nota100 = parseInt(valorASerSacado / 100);
+        valorASerSacado = valorASerSacado % 100;
+        nota50 = parseInt(valorASerSacado / 50);
+        valorASerSacado = valorASerSacado % 50;
+        nota20 = parseInt(valorASerSacado / 20);
+        valorASerSacado = valorASerSacado % 20;
+        nota10 = parseInt(valorASerSacado / 10);
+        valorASerSacado = valorASerSacado % 10;
+        nota5 = parseInt(valorASerSacado / 5);
+        valorASerSacado = valorASerSacado % 5;
+        nota2 = parseInt(valorASerSacado / 2);
+        valorASerSacado = valorASerSacado % 2;
+        nota1 = parseInt(valorASerSacado / 1);
+        valorASerSacado = valorASerSacado % 1;
+
+        document.write("Notas de 100: " + nota100 + "<br>");
+        document.write("Notas de 50: " + nota50 + "<br>");
+        document.write("Notas de 20: " + nota20 + "<br>");
+        document.write("Notas de 10: " + nota10 + "<br>");
+        document.write("Notas de 5: " + nota5 + "<br>");
+        document.write("Notas de 2: " + nota2 + "<br>");
+        document.write("Notas de 1: " + nota1 + "<br>");
+        document.write("Quantidade de moedas: " + valorASerSacado);
+
+    </script>
+</body>
+</html>

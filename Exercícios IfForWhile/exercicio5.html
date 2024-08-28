@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Digite o lado A do triângulo"));
+        let b = parseInt(prompt("Digite o lado B do triângulo"));
+        let c = parseInt(prompt("Digite o lado C do triângulo"));
+
+        /*//Calcula módulos
+        var modulobc = (b - c);
+        if(modulobc < 0) {
+            modulobc *= -1;
+        }
+
+        var moduloac = (a - c);
+        if(moduloac < 0) {
+            moduloac *= -1;
+        }
+
+        var moduloab = (a - b);
+        if(moduloab < 0) {
+            moduloab *= -1;
+        }
+
+        //Descobre se é um triêngulo
+        let resposta = "Não é um triângulo válido";
+
+        if(modulobc  < a && a < b + c){
+            if(moduloac  < b && b < a + c){
+                if(moduloab  < c && c < a + b){
+                    resposta = "é um triângulo válido";
+                }
+            }
+        }
+
+        document.write(resposta);*/
+
+        let resposta = "Triângulo válido";
+
+        if (a > b && a > c) {
+            if(b + c <= a) {
+                resposta = "Triângulo inválido";
+            }
+        } else if (b > c) { 
+            if(a + c <= b) {
+                resposta = "Triângulo inválido";
+            }
+        } else {
+            if(a + b <= c) {
+                resposta = "Triângulo inválido";
+            }
+        }
+
+        document.write(resposta);
+
+
+    
+
+
+        
+    </script>
+</body>
+</html>
