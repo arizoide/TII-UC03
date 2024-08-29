@@ -9,3 +9,4 @@ Diogo
 Giovanna
 Eduardo
 Gabriel
+Thuyzin
